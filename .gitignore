@@ -12,3 +12,8 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+/ignite-cache client/ignite/
+/ignite-cache-server/ignite/
+/ignite-cache-server/.idea/
+/ignite-cache client/.idea/
+/ignite-cache-server/.idea/
