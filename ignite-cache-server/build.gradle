@@ -1,4 +1,6 @@
 plugins {
+//    id 'org.springframework.boot' version '2.6.5'
+//    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
 
@@ -15,11 +17,9 @@ repositories {
 dependencies {
 
     implementation "org.apache.ignite:ignite-core:${ignite_version}"
-
     implementation "org.apache.ignite:ignite-slf4j:${ignite_version}"
     implementation 'org.slf4j:slf4j-simple:2.0.0-alpha7'
-
-
+    implementation 'org.umlg:sqlg-postgres-dialect:2.1.5'
 }
 
 tasks.named('test') {
