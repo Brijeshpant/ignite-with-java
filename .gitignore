@@ -1,3 +1,5 @@
+ .idea/
+ ignite/
 .gradle
 /build/
 
@@ -17,3 +19,5 @@ gradle-app.setting
 /ignite-cache-server/.idea/
 /ignite-cache client/.idea/
 /ignite-cache-server/.idea/
+ignite-cache client/build/
+ignite-cache-server/build/
