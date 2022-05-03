@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
 group = 'com.brij'
@@ -7,18 +9,26 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 ext {
     ignite_version = '2.12.0'
+    ignite_spring_cache_ext_version = '1.0.0'
 }
 repositories {
     mavenCentral()
 }
 
 dependencies {
-
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation "org.apache.ignite:ignite-core:${ignite_version}"
+    implementation 'org.apache.ignite:ignite-spring-boot-autoconfigure-ext:1.0.0'
 
     implementation "org.apache.ignite:ignite-slf4j:${ignite_version}"
     implementation 'org.slf4j:slf4j-simple:2.0.0-alpha7'
 
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    implementation("com.h2database:h2") {
+//        version {
+//            strictly '1.4.197'
+//        }
+//    }
 
 }
 
