@@ -1,22 +1,44 @@
 plugins {
     id 'java'
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
 group = 'com.brij'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 ext {
-    ignite_version = '2.12.0'
+    ignite_version = '2.13.0'
 }
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation "org.apache.ignite:ignite-core:${ignite_version}"
+
+    implementation ("org.apache.ignite:ignite-spring-data-2.2-ext:1.0.0")
+
+    implementation "org.apache.ignite:ignite-indexing:${ignite_version}"
+
+    implementation("org.springframework.data:spring-data-commons")
+            {
+        version( {
+            strictly '2.2.3.RELEASE'
+        })
+    }
+
+    implementation("com.h2database:h2") {
+        version {
+            strictly '1.4.197'
+        }
+    }
 
     implementation "org.apache.ignite:ignite-slf4j:${ignite_version}"
     implementation 'org.slf4j:slf4j-simple:2.0.0-alpha7'
+
+
 }
 
 tasks.named('test') {

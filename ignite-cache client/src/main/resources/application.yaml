@@ -1,0 +1,5 @@
+#ignite-client:
+#  igniteInstanceName: igniteInstance1
+#  consistenceId: clientnode1
+#  addresses: 127.0.0.1
+#  timeout: 10000
