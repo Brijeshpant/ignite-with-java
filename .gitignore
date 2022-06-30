@@ -21,3 +21,7 @@ gradle-app.setting
 ignite-cache client/build/
  ignite-cache-server/build/
  ignite-cache client/src/main/java/com/brij/entities/
+/ignite-cache-server/.idea/
+/.idea/
+/ignite/
+/ignite-cache-server/build/
